@@ -16,7 +16,7 @@ def search(keywords, max_results=None):
         res = requests.post(url, data=params)
         doc = html.fromstring(res.text)
 
-        results = [(a.text, a.get('href'))
+        results = [(a.text_content(), a.get('href'))
                    for a in doc.cssselect('.result__a')]
         for result in results:
             yield result
