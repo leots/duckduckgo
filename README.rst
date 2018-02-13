@@ -3,6 +3,13 @@ duckduckgo.py
 
 duckduckgo.py is a simple python module to scrape the duckduckgo search results. The install script will also make available a ddg command line utility that can be conveniently used in a shell pipeline.
 
+Fork info
+---------
+This fork adds:
+
+- Title support: returns the page titles as well as the URLs, as a tuple.
+- Retry support: when DuckDuckGo returns an error, the search will be retried after 20 seconds, then 40, etc.
+
 A word of warning
 -----------------
 
